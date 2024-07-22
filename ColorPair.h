@@ -12,4 +12,4 @@ extern const int NUMBER_OF_MINOR_COLORS;
 int GetPairNumberFromColorNames(const char* majorColorName, const char* minorColorName);
 void GetColorNamesFromPairNumber(int pairNumber, char* majorColorName, char* minorColorName);
 
-#endif // COLOR_PAIR_H
+#endif // COLOR_PAIR_H 
