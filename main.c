@@ -20,5 +20,5 @@ int main() {
     GetColorNamesFromPairNumber(25, majorColorName, minorColorName);
     printf("Pair number 25 corresponds to: %s and %s\n", majorColorName, minorColorName);
 
-    return 0;
+    return 0; 
 }
