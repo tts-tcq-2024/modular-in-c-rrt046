@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "ColorPairTests.h"
-
-#define MAX_COLORPAIR_NAME_CHARS 16
+#include "ColorPair.h"
 
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
