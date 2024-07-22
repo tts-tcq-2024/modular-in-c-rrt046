@@ -13,4 +13,4 @@ void GetColorNamesFromPairNumber(int pairNumber, char* majorColorName, char* min
 
     sprintf(majorColorName, "%s", MajorColorNames[majorColorIndex]);
     sprintf(minorColorName, "%s", MinorColorNames[minorColorIndex]);
-}
+} 
