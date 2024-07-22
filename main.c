@@ -34,5 +34,8 @@ int main() {
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
 
+    // Test the new feature
+    PrintColorCodingManual();
+
     return 0;
 }
