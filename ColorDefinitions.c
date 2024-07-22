@@ -10,3 +10,4 @@ const char* MinorColorNames[] = {
 
 const int NUMBER_OF_MAJOR_COLORS = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 const int NUMBER_OF_MINOR_COLORS = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+
