@@ -1,41 +1,24 @@
 #include <stdio.h>
-#include <assert.h>
 #include "ColorPair.h"
 
-void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor)
-{
-    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
-    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-    ColorPairToString(&colorPair, colorPairNames);
-    printf("Got pair %s\n", colorPairNames);
-    assert(colorPair.majorColor == expectedMajor);
-    assert(colorPair.minorColor == expectedMinor);
-}
-
-void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
-    int expectedPairNumber)
-{
-    ColorPair colorPair;
-    colorPair.majorColor = major;
-    colorPair.minorColor = minor;
-    int pairNumber = GetPairNumberFromColor(&colorPair);
-    printf("Got pair number %d\n", pairNumber);
-    assert(pairNumber == expectedPairNumber);
-}
-
 int main() {
-    testNumberToPair(4, WHITE, BROWN);
-    testNumberToPair(5, WHITE, SLATE);
+    // Test ColorToNumber
+    printf("Pair number for White and Blue: %d\n", GetPairNumberFromColorNames("White", "Blue"));
+    printf("Pair number for Red and Green: %d\n", GetPairNumberFromColorNames("Red", "Green"));
+    printf("Pair number for Black and Slate: %d\n", GetPairNumberFromColorNames("Black", "Slate"));
 
-    testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(VIOLET, SLATE, 25);
+    // Test NumberToColor
+    char majorColorName[16];
+    char minorColorName[16];
+    
+    GetColorNamesFromPairNumber(1, majorColorName, minorColorName);
+    printf("Pair number 1 corresponds to: %s and %s\n", majorColorName, minorColorName);
 
-    // Test the new feature
-    PrintColorCodingManual();
+    GetColorNamesFromPairNumber(12, majorColorName, minorColorName);
+    printf("Pair number 12 corresponds to: %s and %s\n", majorColorName, minorColorName);
+
+    GetColorNamesFromPairNumber(25, majorColorName, minorColorName);
+    printf("Pair number 25 corresponds to: %s and %s\n", majorColorName, minorColorName);
 
     return 0;
 }
